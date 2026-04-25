@@ -8,220 +8,79 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
-  --gold:#c9a84c;
-  --gold-light:#e8c97a;
-  --gold-dark:#8b6914;
-  --crimson:#8b1a1a;
-  --crimson-light:#c0392b;
-  --parchment:#f5ead8;
-  --ink:#2c1a05;
-  --sepia:#5c3a10;
+  --gold:#c9a84c;--gold-light:#e8c97a;--gold-dark:#8b6914;
+  --crimson:#8b1a1a;--crimson-light:#c0392b;
+  --parchment:#f5ead8;--ink:#2c1a05;
 }
-html{
-  min-height:100%;
-  background:linear-gradient(160deg,#1a0c03 0%,#0d0602 50%,#1a0c03 100%);
-  background-attachment:fixed;
-}
-body{
-  min-height:100vh;
-  font-family:'Cormorant Garamond',Georgia,serif;
-  color:var(--parchment);
-  padding:24px 16px 40px;
-  max-width:480px;margin:0 auto;
-  -webkit-font-smoothing:antialiased;
-}
-
-/* decorative top border */
-.top-border{
-  width:100%;height:3px;
-  background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent);
-  margin-bottom:28px;border-radius:2px;
-  box-shadow:0 0 16px rgba(201,168,76,0.4);
-}
-
-.event-eyebrow{
-  font-family:'Cinzel',serif;
-  font-size:10px;letter-spacing:4px;
-  color:var(--gold);text-align:center;
-  text-transform:uppercase;opacity:0.8;
-  margin-bottom:8px;
-}
-.event-title{
-  font-family:'IM Fell English',serif;
-  font-style:italic;font-size:28px;
-  color:var(--parchment);text-align:center;
-  line-height:1.2;margin-bottom:4px;
-  text-shadow:0 0 20px rgba(201,168,76,0.3);
-}
-.event-sub{
-  font-family:'Cinzel',serif;font-size:10px;
-  letter-spacing:3px;color:var(--gold);
-  text-align:center;opacity:0.7;
-  margin-bottom:28px;
-}
-
-.divider{
-  width:100%;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(201,168,76,0.5),transparent);
-  margin:20px 0;
-}
-
-/* PATH SELECTION */
-.path-label{
-  font-family:'Cinzel',serif;font-size:10px;
-  letter-spacing:3px;text-transform:uppercase;
-  color:var(--gold);text-align:center;
-  margin-bottom:14px;opacity:0.85;
-}
+html{min-height:100%;background:linear-gradient(160deg,#1a0c03 0%,#0d0602 50%,#1a0c03 100%);background-attachment:fixed;}
+body{min-height:100vh;font-family:'Cormorant Garamond',Georgia,serif;color:var(--parchment);padding:24px 16px 40px;max-width:480px;margin:0 auto;-webkit-font-smoothing:antialiased;}
+.top-border{width:100%;height:3px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent);margin-bottom:28px;border-radius:2px;box-shadow:0 0 16px rgba(201,168,76,0.4);}
+.event-eyebrow{font-family:'Cinzel',serif;font-size:10px;letter-spacing:4px;color:var(--gold);text-align:center;text-transform:uppercase;opacity:0.8;margin-bottom:8px;}
+.event-title{font-family:'IM Fell English',serif;font-style:italic;font-size:28px;color:var(--parchment);text-align:center;line-height:1.2;margin-bottom:4px;text-shadow:0 0 20px rgba(201,168,76,0.3);}
+.event-sub{font-family:'Cinzel',serif;font-size:10px;letter-spacing:3px;color:var(--gold);text-align:center;opacity:0.7;margin-bottom:28px;}
+.path-label{font-family:'Cinzel',serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:14px;opacity:0.85;}
 .path-btns{display:flex;gap:10px;margin-bottom:24px;}
-.path-btn{
-  flex:1;padding:14px 8px;
-  font-family:'Cinzel',serif;font-size:11px;
-  letter-spacing:1px;text-transform:uppercase;
-  border:1.5px solid;border-radius:3px;
-  cursor:pointer;transition:all 0.25s;
-  text-align:center;line-height:1.4;
-  background:transparent;
-}
-.path-btn.honor{
-  border-color:var(--crimson);color:var(--crimson-light);
-}
-.path-btn.honor.active{
-  background:rgba(139,26,26,0.35);color:var(--parchment);
-  box-shadow:0 0 20px rgba(139,26,26,0.3);
-}
-.path-btn.pledge{
-  border-color:var(--gold-dark);color:var(--gold);
-}
-.path-btn.pledge.active{
-  background:rgba(201,168,76,0.25);color:var(--parchment);
-  box-shadow:0 0 20px rgba(201,168,76,0.3);
-}
-
-/* FORM */
-.form-section{
-  background:rgba(245,234,216,0.05);
-  border:1px solid rgba(201,168,76,0.2);
-  border-radius:4px;padding:20px 16px;
-  margin-bottom:16px;
-}
-.section-title{
-  font-family:'Cinzel',serif;font-size:10px;
-  letter-spacing:3px;text-transform:uppercase;
-  color:var(--gold);margin-bottom:16px;
-  padding-bottom:10px;
-  border-bottom:1px solid rgba(201,168,76,0.25);
-}
+.path-btn{flex:1;padding:14px 8px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;border:1.5px solid;border-radius:3px;cursor:pointer;transition:all 0.25s;text-align:center;line-height:1.4;background:transparent;}
+.path-btn.honor{border-color:var(--crimson);color:var(--crimson-light);}
+.path-btn.honor.active{background:rgba(139,26,26,0.35);color:var(--parchment);box-shadow:0 0 20px rgba(139,26,26,0.3);}
+.path-btn.pledge{border-color:var(--gold-dark);color:var(--gold);}
+.path-btn.pledge.active{background:rgba(201,168,76,0.25);color:var(--parchment);box-shadow:0 0 20px rgba(201,168,76,0.3);}
+.form-section{background:rgba(245,234,216,0.05);border:1px solid rgba(201,168,76,0.2);border-radius:4px;padding:20px 16px;margin-bottom:16px;}
+.section-title{font-family:'Cinzel',serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(201,168,76,0.25);}
 .field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
 .field:last-child{margin-bottom:0;}
-.field label{
-  font-family:'Cinzel',serif;font-size:9px;
-  letter-spacing:2px;text-transform:uppercase;
-  color:var(--gold);opacity:0.8;
-}
-.field input{
-  background:rgba(245,234,216,0.08);
-  border:1px solid rgba(201,168,76,0.3);
-  border-radius:3px;padding:13px 14px;
-  color:var(--parchment);
-  font-family:'Cormorant Garamond',serif;font-size:17px;
-  outline:none;transition:all 0.2s;
-  -webkit-appearance:none;
-}
-.field input:focus{
-  border-color:var(--gold);
-  background:rgba(245,234,216,0.12);
-}
+.field label{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);opacity:0.8;}
+.field input{background:rgba(245,234,216,0.08);border:1px solid rgba(201,168,76,0.3);border-radius:3px;padding:13px 14px;color:var(--parchment);font-family:'Cormorant Garamond',serif;font-size:17px;outline:none;transition:all 0.2s;-webkit-appearance:none;}
+.field input:focus{border-color:var(--gold);background:rgba(245,234,216,0.12);}
 .field input::placeholder{color:rgba(245,234,216,0.3);}
-
 .amount-row{display:flex;align-items:center;gap:8px;}
-.currency{
-  font-family:'Cinzel',serif;font-size:20px;
-  color:var(--gold);font-weight:700;
-  padding-top:2px;
-}
+.currency{font-family:'Cinzel',serif;font-size:20px;color:var(--gold);font-weight:700;padding-top:2px;}
 .amount-row input{flex:1;}
-
-/* SUBMIT */
-.submit-btn{
-  width:100%;padding:16px;
-  font-family:'Cinzel',serif;font-size:12px;
-  letter-spacing:4px;text-transform:uppercase;
-  border:none;border-radius:3px;cursor:pointer;
-  background:linear-gradient(135deg,var(--gold-dark),var(--gold),var(--gold-light));
-  color:var(--ink);font-weight:700;
-  box-shadow:0 4px 24px rgba(201,168,76,0.35);
-  transition:all 0.25s;margin-top:8px;
-  -webkit-appearance:none;
-}
-.submit-btn:active{transform:scale(0.98);box-shadow:0 2px 12px rgba(201,168,76,0.3);}
-
-/* SUCCESS STATE */
-.success-screen{
-  display:none;text-align:center;padding:40px 16px;
-}
+.submit-btn{width:100%;padding:16px;font-family:'Cinzel',serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;border:none;border-radius:3px;cursor:pointer;background:linear-gradient(135deg,var(--gold-dark),var(--gold),var(--gold-light));color:var(--ink);font-weight:700;box-shadow:0 4px 24px rgba(201,168,76,0.35);transition:all 0.25s;margin-top:8px;-webkit-appearance:none;}
+.submit-btn:active{transform:scale(0.98);}
+.submit-btn:disabled{opacity:0.6;}
+.success-screen{display:none;text-align:center;padding:40px 16px;}
 .success-rose{font-size:52px;margin-bottom:20px;}
-.success-title{
-  font-family:'Cinzel',serif;font-size:18px;
-  color:var(--gold-light);letter-spacing:2px;
-  margin-bottom:12px;
-}
-.success-msg{
-  font-family:'IM Fell English',serif;font-style:italic;
-  font-size:18px;color:var(--parchment);
-  line-height:1.5;margin-bottom:24px;opacity:0.9;
-}
-.success-name{
-  font-family:'Cinzel',serif;font-size:22px;
-  color:var(--gold-light);letter-spacing:1px;
-  margin-bottom:6px;
-}
-.success-relation{
-  font-family:'IM Fell English',serif;font-style:italic;
-  font-size:16px;color:var(--gold);opacity:0.8;
-  margin-bottom:28px;
-}
-.another-btn{
-  padding:13px 28px;
-  font-family:'Cinzel',serif;font-size:10px;
-  letter-spacing:3px;text-transform:uppercase;
-  border:1.5px solid var(--gold-dark);border-radius:3px;
-  background:transparent;color:var(--gold);
-  cursor:pointer;transition:all 0.2s;
-}
-.another-btn:active{background:rgba(201,168,76,0.15);}
-
-.bottom-note{
-  font-family:'IM Fell English',serif;font-style:italic;
-  font-size:13px;color:var(--gold);opacity:0.55;
-  text-align:center;margin-top:28px;line-height:1.5;
-}
-.error-msg{
-  color:var(--crimson-light);font-family:'Cinzel',serif;
-  font-size:10px;letter-spacing:1px;
-  text-align:center;margin-top:8px;
-  display:none;
-}
+.success-title{font-family:'Cinzel',serif;font-size:18px;color:var(--gold-light);letter-spacing:2px;margin-bottom:12px;}
+.success-name{font-family:'Cinzel',serif;font-size:22px;color:var(--gold-light);letter-spacing:1px;margin-bottom:6px;}
+.success-relation{font-family:'IM Fell English',serif;font-style:italic;font-size:16px;color:var(--gold);opacity:0.8;margin-bottom:16px;}
+.success-msg{font-family:'IM Fell English',serif;font-style:italic;font-size:18px;color:var(--parchment);line-height:1.5;margin-bottom:24px;opacity:0.9;}
+.another-btn{padding:13px 28px;font-family:'Cinzel',serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;border:1.5px solid var(--gold-dark);border-radius:3px;background:transparent;color:var(--gold);cursor:pointer;}
+.bottom-note{font-family:'IM Fell English',serif;font-style:italic;font-size:13px;color:var(--gold);opacity:0.55;text-align:center;margin-top:28px;line-height:1.5;}
+.error-msg{color:var(--crimson-light);font-family:'Cinzel',serif;font-size:10px;letter-spacing:1px;text-align:center;margin-top:8px;display:none;}
+/* hidden iframe for form submission */
+iframe#submitter{display:none;width:0;height:0;border:none;}
 </style>
 </head>
 <body>
-
 <div class="top-border"></div>
 <div class="event-eyebrow">Charity Event for Alzheimer's Research</div>
 <div class="event-title">Through the Looking Glass</div>
 <div class="event-sub">For a Cure &nbsp;·&nbsp; April 25, 2026</div>
 
-<!-- MAIN FORM -->
+<!-- Hidden iframe — receives the form POST response silently -->
+<iframe name="submitter" id="submitter"></iframe>
+
+<!-- Hidden form that actually posts to Apps Script -->
+<form id="hiddenForm" 
+      action="https://script.google.com/macros/s/AKfycbzEkD4LN-j3OtHNALWP7YDTKhloBNxPrqz0DQGdIJp7haay2ax4nbz9QMw-UFkrwbEfwA/exec"
+      method="POST" 
+      target="submitter">
+  <input type="hidden" name="type" id="fType" value="honor">
+  <input type="hidden" name="honoredName" id="fHonoredName">
+  <input type="hidden" name="relationship" id="fRelationship">
+  <input type="hidden" name="pledgerName" id="fPledgerName">
+  <input type="hidden" name="pledgeAmount" id="fPledgeAmount" value="0">
+</form>
+
 <div id="mainForm">
   <div class="path-label">Choose Your Path</div>
   <div class="path-btns">
     <button class="path-btn honor active" onclick="setPath('honor')">🌹 Honor a<br>Loved One</button>
     <button class="path-btn pledge" onclick="setPath('pledge')">✦ Make a<br>Pledge</button>
   </div>
-
   <div class="form-section">
     <div class="section-title" id="sectionTitle">In Honor Of</div>
-
     <div class="field">
       <label>Their Name</label>
       <input type="text" id="honoredName" placeholder="e.g. Margaret Rose" autocomplete="off">
@@ -231,7 +90,6 @@ body{
       <input type="text" id="relationship" placeholder="e.g. My mother · My father">
     </div>
   </div>
-
   <div class="form-section" id="pledgeSection" style="display:none;">
     <div class="section-title">Your Pledge</div>
     <div class="field">
@@ -246,17 +104,14 @@ body{
       <input type="text" id="pledgerName" placeholder="Your name">
     </div>
   </div>
-
   <div class="error-msg" id="errorMsg">Please enter the name of your loved one.</div>
-  <button class="submit-btn" onclick="submitEntry()">Submit & Honor ✦</button>
-
+  <button class="submit-btn" id="submitBtn" onclick="submitEntry()">Submit & Honor ✦</button>
   <div class="bottom-note">
     Your submission will appear live on the<br>Memory Wall at the Savannah Center tonight.<br><br>
     For tickets & information: <strong style="color:var(--gold);">954-839-5880</strong>
   </div>
 </div>
 
-<!-- SUCCESS SCREEN -->
 <div class="success-screen" id="successScreen">
   <div class="success-rose">🌹</div>
   <div class="success-title">Honored & Remembered</div>
@@ -264,16 +119,10 @@ body{
   <div class="success-relation" id="successRelation"></div>
   <div class="success-msg">Their name now shines on the Memory Wall tonight for all to see.</div>
   <button class="another-btn" onclick="resetForm()">Honor Another ✦</button>
-  <div class="bottom-note">
-    Through the Looking Glass — For a Cure<br>
-    April 25, 2026 · Savannah Center, The Villages, FL
-  </div>
+  <div class="bottom-note">Through the Looking Glass — For a Cure<br>April 25, 2026 · Savannah Center, The Villages, FL</div>
 </div>
 
 <script>
-// ── PASTE YOUR APPS SCRIPT URL HERE ──
-const SCRIPT_URL = 'PASTE_APPS_SCRIPT_URL_HERE';
-
 let currentPath = 'honor';
 
 function setPath(path) {
@@ -281,43 +130,33 @@ function setPath(path) {
   document.querySelectorAll('.path-btn').forEach(b => b.classList.remove('active'));
   document.querySelector('.path-btn.' + path).classList.add('active');
   document.getElementById('pledgeSection').style.display = path === 'pledge' ? 'block' : 'none';
-  document.getElementById('sectionTitle').textContent = path === 'honor' ? 'In Honor Of' : 'In Honor Of';
 }
 
 function submitEntry() {
   const honoredName = document.getElementById('honoredName').value.trim();
   const relationship = document.getElementById('relationship').value.trim();
-  const pledgeAmount = parseFloat(document.getElementById('pledgeAmount').value) || 0;
+  const pledgeAmount = document.getElementById('pledgeAmount').value || '0';
   const pledgerName = document.getElementById('pledgerName').value.trim();
   const errMsg = document.getElementById('errorMsg');
 
-  if (!honoredName) {
-    errMsg.style.display = 'block';
-    document.getElementById('honoredName').focus();
-    return;
-  }
+  if (!honoredName) { errMsg.style.display='block'; document.getElementById('honoredName').focus(); return; }
   errMsg.style.display = 'none';
 
-  const btn = document.querySelector('.submit-btn');
+  // Populate hidden form fields
+  document.getElementById('fType').value = currentPath;
+  document.getElementById('fHonoredName').value = honoredName;
+  document.getElementById('fRelationship').value = relationship;
+  document.getElementById('fPledgerName').value = pledgerName;
+  document.getElementById('fPledgeAmount').value = currentPath === 'pledge' ? pledgeAmount : '0';
+
+  // Submit via hidden form — bypasses CORS entirely
+  document.getElementById('hiddenForm').submit();
+
+  // Show success immediately
+  const btn = document.getElementById('submitBtn');
   btn.textContent = 'Sending...';
   btn.disabled = true;
-
-  const payload = {
-    type: currentPath,
-    honoredName,
-    relationship,
-    pledgeAmount: currentPath === 'pledge' ? pledgeAmount : 0,
-    pledgerName: currentPath === 'pledge' ? pledgerName : ''
-  };
-
-  fetch(SCRIPT_URL, {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(payload)
-  })
-  .then(() => showSuccess(honoredName, relationship))
-  .catch(() => showSuccess(honoredName, relationship)); // show success regardless — no-cors won't return readable response
+  setTimeout(() => showSuccess(honoredName, relationship), 800);
 }
 
 function showSuccess(name, relation) {
@@ -337,9 +176,8 @@ function resetForm() {
   document.querySelector('.path-btn.honor').classList.add('active');
   document.querySelector('.path-btn.pledge').classList.remove('active');
   document.getElementById('pledgeSection').style.display = 'none';
-  document.getElementById('sectionTitle').textContent = 'In Honor Of';
-  document.querySelector('.submit-btn').textContent = 'Submit & Honor ✦';
-  document.querySelector('.submit-btn').disabled = false;
+  document.getElementById('submitBtn').textContent = 'Submit & Honor ✦';
+  document.getElementById('submitBtn').disabled = false;
   document.getElementById('mainForm').style.display = 'block';
   document.getElementById('successScreen').style.display = 'none';
 }
